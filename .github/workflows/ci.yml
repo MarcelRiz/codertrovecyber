@@ -23,7 +23,7 @@ env:
 jobs:
   app:
     name: app
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: app
@@ -52,7 +52,7 @@ jobs:
 
   admin:
     name: admin
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: admin
@@ -63,7 +63,12 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: yarn
           cache-dependency-path: admin/yarn.lock
-      - run: yarn install --frozen-lockfile
+      - name: Install
+        # --ignore-scripts skips the "prepare" script (husky install). Husky 7
+        # fails because .git is in the repo root, not in admin/, and it ignores
+        # HUSKY=0. No dependency needs its install script: the only ones
+        # (fontawesome, core-js) just print messages.
+        run: yarn install --frozen-lockfile --ignore-scripts
       - name: Lint
         run: yarn lint
         # Fails today: eslint finds no files (.eslintignore ignores *.js and
@@ -86,7 +91,7 @@ jobs:
 
   api:
     name: api
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: api
@@ -107,7 +112,7 @@ jobs:
 
   secrets:
     name: secrets
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       GITLEAKS_VERSION: 8.30.1
     steps:
@@ -128,7 +133,7 @@ jobs:
 
   deps:
     name: deps (${{ matrix.dir }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
