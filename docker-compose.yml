@@ -1,0 +1,112 @@
+# Local development only.
+# Every password and secret in this file is a throwaway value for your own PC.
+# Never reuse them on a staging or production server.
+name: codertrovecyber
+
+services:
+  # Postgres database used by the API
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: codertrovecyber
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: localdev
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d codertrovecyber"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # Backend API (Strapi 3). Open http://localhost:1337/admin
+  api:
+    image: node:14
+    working_dir: /srv/app
+    command: sh -c "yarn install && yarn develop"
+    environment:
+      NODE_ENV: development
+      ENVIRONMENT: DEVELOPMENT
+      HOST: 0.0.0.0
+      PORT: 1337
+      URL: http://localhost:1337
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: codertrovecyber
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: localdev
+      ADMIN_JWT_SECRET: local-dev-admin-jwt-not-a-real-secret
+      JWT_SECRET: local-dev-user-jwt-not-a-real-secret
+      USER_PORTAL: http://localhost:3000
+      ADMIN_PORTAL: http://localhost:3001
+      PLATFORM_NAME: codertrovecyber
+    volumes:
+      - ./api:/srv/app
+      - api-node-modules:/srv/app/node_modules
+    ports:
+      - "1337:1337"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # User portal (Next.js). Open http://localhost:3000
+  app:
+    image: node:14
+    working_dir: /app
+    command: sh -c "yarn install --frozen-lockfile && yarn dev"
+    environment:
+      HUSKY: "0"
+      HUSKY_SKIP_INSTALL: "1"
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_API: http://localhost:1337
+      NEXT_PUBLIC_TENANT: continuum
+      NEXT_PUBLIC_TITLE: Coder Trove Cyber
+      NEXT_PUBLIC_DESCRIPTION: Coder Trove Cyber
+      NEXT_PUBLIC_SECURITY_IMAGE_URL: images/svg/illustrations/illustration-14.svg
+      PDFMAKE_FONT_PATH: ../../../..
+    volumes:
+      - ./app:/app
+      - app-node-modules:/app/node_modules
+      - app-next:/app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+  # Admin portal (Next.js). Open http://localhost:3001
+  admin:
+    image: node:14
+    working_dir: /app
+    command: sh -c "yarn install --frozen-lockfile && yarn dev"
+    environment:
+      HUSKY: "0"
+      HUSKY_SKIP_INSTALL: "1"
+      NEXT_TELEMETRY_DISABLED: "1"
+      API_URI: http://localhost:1337
+      NEXTAUTH_URL: http://localhost:3001
+      NEXT_PUBLIC_API_URL: http://localhost:1337
+      NEXT_PUBLIC_INTERNAL_API_URL: http://api:1337
+      NEXT_PUBLIC_TENANT: continuum
+      NEXT_PUBLIC_TITLE: Coder Trove Cyber Admin
+      NEXT_PUBLIC_DESCRIPTION: Coder Trove Cyber Admin
+      ENVIRONMENT: DEVELOPMENT
+      # Admin sign-in uses Google. Leave blank until we create our own Google OAuth client.
+      GOOGLE_CLIENT_ID: ""
+      GOOGLE_CLIENT_SECRET: ""
+    volumes:
+      - ./admin:/app
+      - admin-node-modules:/app/node_modules
+      - admin-next:/app/.next
+    ports:
+      - "3001:3000"
+    depends_on:
+      - api
+
+volumes:
+  db-data:
+  api-node-modules:
+  app-node-modules:
+  app-next:
+  admin-node-modules:
+  admin-next:
