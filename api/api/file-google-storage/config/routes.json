@@ -1,0 +1,98 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/file-google-storages",
+      "handler": "file-google-storage.find",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-google-storages/uploadFileLite",
+      "handler": "GCS.uploadFileLite",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated"
+        ],
+        "description": "Upload fine without control data"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-google-storages/getFile",
+      "handler": "GCS.getFile",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated"
+        ],
+        "description": "Get signature url to get exist files"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-google-storages/getSignatureCreateFile",
+      "handler": "GCS.getSignatureCreateFile",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated",
+          "plugins::users-permissions.isAdmin"
+        ],
+        "description": "Get signature url to create files"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-google-storages/removeFile",
+      "handler": "GCS.removeFile",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated",
+          "plugins::users-permissions.isAdmin"
+        ],
+        "description": "Remove files"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/file-google-storages/count",
+      "handler": "file-google-storage.count",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/file-google-storages/:id",
+      "handler": "file-google-storage.findOne",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-google-storages",
+      "handler": "file-google-storage.create",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/file-google-storages/:id",
+      "handler": "file-google-storage.update",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/file-google-storages/:id",
+      "handler": "file-google-storage.delete",
+      "config": {
+        "policies": ["plugins::users-permissions.isAuthenticated"]
+      }
+    }
+  ]
+}

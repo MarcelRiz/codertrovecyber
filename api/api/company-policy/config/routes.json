@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/company-policies",
+      "handler": "company-policy.find",
+      "config": {
+        "policies": [
+          "isPolicyHasCompanyFilter",
+          "company.isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company-policies/count",
+      "handler": "company-policy.count",
+      "config": {
+        "policies": [
+          "isPolicyHasCompanyFilter",
+          "company.isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company-policies/:id",
+      "handler": "company-policy.findOne",
+      "config": {
+        "policies": [
+          "isPolicyHasIdParam",
+          "isPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company-policies",
+      "handler": "company-policy.create",
+      "config": {
+        "policies": [
+          "isPolicyHasCompanyBody",
+          "company.isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/company-policies/:id",
+      "handler": "company-policy.update",
+      "config": {
+        "policies": [
+          "isPolicyHasIdParam",
+          "isPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/company-policies/:id",
+      "handler": "company-policy.delete",
+      "config": {
+        "policies": [
+          "isPolicyHasIdParam",
+          "isPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company-policies/generate-cyber-policies/:companyId",
+      "handler": "company-policy.generateCyberPolicies",
+      "config": {
+        "policies": [
+          "company.isCompanyHasCompanyIdParam",
+          "company.isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company-policies/:id/download",
+      "handler": "company-policy.download",
+      "config": {
+        "policies": [
+          "isPolicyHasIdParam",
+          "isPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company-policies/preview",
+      "handler": "company-policy.preview",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

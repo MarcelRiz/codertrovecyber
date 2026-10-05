@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_stripe_sessions",
+  "info": {
+    "name": "PaymentStripeSession",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sessionId": {
+      "type": "string",
+      "required": true
+    },
+    "customerStripeId": {
+      "type": "string",
+      "required": true
+    },
+    "amountTotal": {
+      "type": "float"
+    },
+    "amountSubtotal": {
+      "type": "float"
+    },
+    "subscriptionId": {
+      "type": "string",
+      "required": true
+    },
+    "invoiceUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "interval": {
+      "type": "string"
+    },
+    "intervalCount": {
+      "type": "integer"
+    },
+    "productStripeId": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "pricingPlan": {
+      "type": "string"
+    },
+    "hasCreatedAccount": {
+      "type": "boolean",
+      "default": false
+    },
+    "paymentPlatform": {
+      "via": "paymentStripeSessions",
+      "model": "payment-platform"
+    },
+    "paymentStripeActivityHistories": {
+      "via": "paymentStripeSession",
+      "collection": "payment-stripe-activity-history"
+    }
+  }
+}

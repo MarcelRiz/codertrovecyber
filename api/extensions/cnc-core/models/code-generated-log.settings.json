@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "code_generated_logs",
+  "info": {
+    "name": "codeGeneratedLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true,
+    "increments": true,
+    "comment": ""
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "jwt",
+        "otp",
+        "confirmation",
+        "resetPassword"
+      ]
+    },
+    "user": {
+      "via": "codeGeneratedLogs",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "generatedAt": {
+      "type": "datetime"
+    },
+    "lastValue": {
+      "type": "text"
+    },
+    "isLongLive": {
+      "type": "boolean",
+      "default": false,
+      "private": true
+    }
+  }
+}

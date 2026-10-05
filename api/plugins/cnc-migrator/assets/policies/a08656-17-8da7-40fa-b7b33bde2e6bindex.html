@@ -1,0 +1,94 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+<body>
+  <h3>Purpose of this Policy</h3>
+  <p>The purpose of this policy is to detail how to identify and handle confidential data. This policy lays out standards for the classification and use of confidential data and outlines specific security controls to protect this data.</p>
+  <h3>Policy Statements</h3>
+  <h4>Data Classification</h4>
+  <p>Information assets are assets to {Company_Name} just like physical property. In order to determine the value of the asset and how it should be handled, data must be classified according to its importance to company operations and the confidentiality of its contents. Once this has been determined, {Company_Name} can take steps to ensure that data is treated appropriately.</p>
+  <p>Of particular concern is confidential data or cardholder data. This must be identified and inventoried in all its forms – electronic, printed, or stored on digital media – and segregated from {Company_Name}’s non-confidential data so that access to it can be more tightly controlled and tracked. Any media that contains cardholder data must be catalogued and secured.</p>
+  <h4>Treatment of Confidential Data</h4>
+  <p>The following sections detail company requirements on the storage, transmission, and destruction of confidential data:</p>
+  <h5>Storage</h5>
+  <p>Confidential data, such as cardholder data, must be removed from desks, computer screens, and common areas unless it is currently in use. Confidential information must be stored under lock and key (or key card/keypad), with the key, key card, or code secured.</p>
+  <p>Confidential data must be stored in encrypted form, using strong encryption, when storage of this data is necessary. Note that this requirement applies to backups containing confidential data as well.</p>
+  <p>Confidential data must be stored only when absolutely necessary. When handling cardholder data, the following must never be stored: the full contents of any track from a credit card magnetic stripe, the card verification code, and the personal identification number (PIN) or encrypted PIN block. The following data can be retained if there is a business need to do so and they are appropriately secured:</p>
+  <ul>
+    <li>Cardholder name</li>
+    <li>Primary Account Number (PAN)</li>
+    <li>Expiration Date</li>
+    <li>Service Code</li>
+  </ul>
+  <p>When credit card Primary Account Numbers (PANs) need to be stored, no matter what the storage medium, they must be stored in such a way that they are rendered unreadable. The most commonly used way to accomplish this is via strong cryptography and one-way hashes based on strong cryptography; however other methods can be used as well, such as index tokens and pads. No matter what method is used, {Company_Name} must implement guidelines for secure storage of encryption materials as well as secure processes for their use.</p>
+  <p>When credit card authentication data is received, the data must be securely deleted following authentication, using the guidelines in section 2.3. Processes must be implemented to ensure that this data is unrecoverable.</p>
+  <p>Confidential data must never be stored on non-company-provided systems (i.e., home computers).</p>
+  <h5>Transmission</h5>
+  <p>Strong encryption must be used when transmitting confidential data, such as credit card data, when such transmission takes place outside {Company_Name}'s network. Confidential data must not be left on voicemail systems, either inside or outside {Company_Name}'s network, or otherwise recorded.</p>
+  <p>Additional requirements that apply to the transmission of confidential data are that {Company_Name} must:</p>
+  <ul>
+    <li>Only accept trusted keys and certificates. Ensure that processes are in place to verify that only trusted keys and certificates are accepted.</li>
+    <li>Require the use of strong encryption by disabling support for weaker encryption schemes.</li>
+    <li>Ensure that proper encryption strength is implemented for the encryption methodology in use per vendor specifications.</li>
+    <li>If the transmission occurs as part of a web application, ensure that HTTPS is displayed in the browser URL bar whenever confidential information, such as cardholder data, is requested.</li>
+  </ul>
+  <h5>Destruction</h5>
+  <p>Media containing confidential data must be destroyed in a manner that makes recovery of the information impossible. The following guidelines apply:</p>
+  <p>Paper/documents: cross-cut shredding or incineration is required in order to make the data unrecoverable.</p>
+  <p>Storage media (CD's, DVD's): physical destruction is required, via any means that makes the data unrecoverable.</p>
+  <p>Hard Drives/Systems/Mobile Storage Media: physical destruction is required. If physical destruction is not possible, the Information Security Manager must be notified, and the strongest commercially available data wiping technology used to ensure this data is unrecoverable.</p>
+  <p>Rather than putting the responsibility for data destruction on users, {Company_Name} may implement a system to ensure that data is destroyed in a manner consistent with this policy. Media awaiting destruction under this policy must be physically secured until the necessary destruction can take place. This can be in the form of a locked cabinet or other secure storage solution.</p>
+  <h4>Examples of Confidential Data</h4>
+  <p>The following list is not intended to be exhaustive but should provide {Company_Name} with guidelines on what type of information is typically considered confidential. Confidential data can include:</p>
+  <ul>
+    <li>Credit card information/cardholder data</li>
+    <li>Employee or customer social security numbers, or other personal information</li>
+    <li>Medical and healthcare information</li>
+    <li>Electronic Protected Health Information (EPHI)</li>
+    <li>Customer data, including customer lists and customer contact information</li>
+    <li>Company financial data which has not been released publicly</li>
+    <li>Sales forecasts</li>
+    <li>Product and/or service plans, details, and schematics</li>
+    <li>Network diagrams and security configurations</li>
+    <li>Communications about corporate legal matters</li>
+    <li>Passwords</li>
+    <li>Bank account information and routing numbers</li>
+    <li>Payroll information</li>
+    <li>Any confidential data held for a third party (be sure to adhere to any confidential data agreement covering such information) and append that agreement, or a summary thereof, to this policy.</li>
+  </ul>
+  <h4>Use of Confidential Data</h4>
+  <p>A successful confidential data policy is dependent on the users knowing and adhering to {Company_Name}'s standards involving the treatment of confidential data. The following applies to how users must interact with confidential data:</p>
+  <ul>
+    <li>Users must be advised of any confidential data they have been granted access. Such data must be marked or otherwise designated "confidential."</li>
+    <li>Users must only access confidential data to perform his/her job function.</li>
+    <li>Users must not seek personal benefit, or assist others in seeking personal benefit, from the use of confidential information.</li>
+    <li>Users must protect any confidential information to which they have been granted access and not reveal, release, share, email unencrypted, exhibit, display, distribute, or discuss the information unless necessary to do their job or the action is approved by their supervisor.</li>
+    <li>Users must report any suspected misuse or unauthorised disclosure of confidential information immediately to their supervisor.</li>
+  </ul>
+  <h4>Sharing Confidential Data with Third Parties</h4>
+  <p>If confidential data is shared with third parties, such as service providers, a written confidential information and/or non-disclosure agreement must govern the provider’s use of confidential information. Further, {Company_Name} must maintain a written agreement with the provider that indicates how the data should be used, secured, and destroyed.</p>
+  <p>When {Company_Name} will be sharing confidential data or cardholder data with a service provider or other third party, due diligence must always be performed prior to a provider being selected. Further details about due diligence can be found in the Vendor Management Policy.</p>
+  <p>If media containing confidential or cardholder data is sent external to {Company_Name}, rigorous security procedures must be developed and maintained, which will include, at minimum, credential-verification and signature of the backup service courier. Media must be sent via a delivery method that allows the media to be tracked.</p>
+  <h4>Security Controls for Confidential Data</h4>
+  <p>Confidential data requires additional security controls in order to ensure its integrity. The Company requires that the following guidelines are followed:</p>
+  <p><u>Strong Encryption</u>: Strong encryption must be used for confidential data transmitted external to {Company_Name}. Confidential data must always be stored in encrypted form, whether such storage occurs on a user system, server, laptop, or any other device that allows for data storage.</p>
+  <p><u>Network Segmentation</u>: The Company must use firewalls, access control lists, or other security controls to separate the confidential data from the rest of the corporate network. More information about this can be found in the IT Security Policy.</p>
+  <p><u>Physical Security</u>: Systems that contain confidential data, as well as confidential data in hardcopy form, must be stored in secured areas. Special thought should be given to the security of the keys and access controls that secure this data.</p>
+  <p><u>Printing</u>: When printing confidential data, the user must use best efforts to ensure that the information is not viewed by others. Printers that are used for confidential data must be located in secured areas.</p>
+  <p><u>Faxing</u>: When faxing confidential data, users must use cover sheets that inform the recipient that the information is confidential. Faxes must be set to print a confirmation page after a fax is sent; and the user must attach this page to the confidential data if it is to be stored. Fax machines that are regularly used for sending and/or receiving confidential data must be located in secured areas.</p>
+  <p><u>Emailing</u>: Confidential data must not be emailed inside or outside {Company_Name} without the use of strong encryption. More information can be found in the Email Policy.</p>
+  <p><u>Mailing</u>: If confidential information is sent outside {Company_Name}, the user must use a service that requires a signature for receipt of that information. When sent inside {Company_Name}, confidential data must be transported in sealed security envelopes marked "confidential."</p>
+  <p><u>Wireless Access</u>: When confidential data, such as cardholder information, is transmitted or accessed via wireless networks, {Company_Name} must use wireless industry best practices for encryption, such as IEEE 802.11i. Only the strongest encryption algorithms must be used to secure this data during transmission. Please note that the use of known insecure encryption methods, such as WEP, is expressly prohibited.</p>
+  <p><u>Discussion</u>: When confidential information is discussed it must be done in non-public places, and where the discussion cannot be overheard.</p>
+  <p><u>Display</u>: When confidential data is numerical, such as social security numbers or cardholder data, it must be removed if at all possible. If necessary, for this information to be displayed, the number, such as a cardholder’s Primary Account Number (PAN), it must be masked (i.e., such that only the last four digits displayed). Please note that this restriction does not apply to employees who must have access to this data to perform their job functions. This requirement does not supersede more restrictive requirements relating to the display of confidential data. Confidential data must be removed from documents unless its inclusion is absolutely necessary.</p>
+  <p>If confidential data is written on a whiteboard or other physical presentation tool, the data must be erased after the meeting is concluded.</p>
+  <p><u>Media</u>: Any media containing confidential information or cardholder data must be physically secured in an access-controlled area or high security zone. Media moved from one area to another must be logged with, at minimum, the following information: contact information of mover, reason for move, new location of media, security precaution taken, and proof of management approval was obtained prior to the media being moved. The Company must control all aspects of storage and accessibility of media, including storing media in secured areas, maintaining inventory logs of media, and conducting annual inventories of all media.</p>
+  <h4>Emergency Access to Data</h4>
+  <p>If {Company_Name}’s confidential data has critical business or health implications (i.e., healthcare information), a procedure for accessing this data during an emergency must be developed and documented. The Company must establish a procedure for emergency access in case the normal mechanism for access to the data becomes unavailable or disabled due to system or network problems.</p>
+  <ul>
+    <li>The procedure should answer the following questions:</li>
+    <li>What process must be followed to activate the emergency access procedure?</li>
+    <li>What systems will it involve?</li>
+    <li>In what situations should it be activated?</li>
+    <li>Will it be activated automatically if certain conditions are met, or will it require human intervention? If so, who is authorised to make the decision to implement the procedure?</li>
+  </ul>
+  <p>Who will be involved in the process and what roles will they perform?</p>
+</body></html>

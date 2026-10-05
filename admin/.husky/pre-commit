@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# CHECK - IF ENVIRONMENT is DEVELOPMENT to run HUSKY, ELSE - BY PASS
+if [ -f .env ]; then
+    # Load Environment Variables
+    export $(cat .env | grep -v '#' | awk '/=/ {print $1}')
+
+    # Check variable ENVIRONMENT
+    if [ $ENVIRONMENT = "DEVELOPMENT" ];then
+      echo "Run husky..."
+      yarn lint-staged && yarn build && yarn typeCheck
+    else
+      yarn lint-staged
+      echo "Ignore husky steps..."
+      exit 0
+    fi
+else
+  echo "Nope..."
+fi

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_assigned_courses",
+  "info": {
+    "name": "StaffAssignedCourse",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "course": {
+      "model": "course"
+    },
+    "user": {
+      "via": "staffAssignedCourses",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quizTypeformResponseID": {
+      "type": "string"
+    }
+  }
+}

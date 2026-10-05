@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cron_tasks",
+  "info": {
+    "name": "CronTask",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "repeat": {
+      "type": "enumeration",
+      "enum": [
+        "everyMinute",
+        "everyTwoMinutes",
+        "everyFifteenMinutes",
+        "everyHour",
+        "everyDay",
+        "every4Hours",
+        "everyWeek",
+        "every2Week"
+      ]
+    },
+    "lastRunAt": {
+      "type": "datetime"
+    },
+    "nextRunAt": {
+      "type": "datetime"
+    },
+    "log": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

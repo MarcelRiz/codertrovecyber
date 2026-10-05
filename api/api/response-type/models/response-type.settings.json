@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "response_types",
+  "info": {
+    "name": "ResponseType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "responses": {
+      "type": "json"
+    }
+  }
+}

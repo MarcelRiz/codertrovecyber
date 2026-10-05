@@ -1,0 +1,40 @@
+.viewer {
+  height: unquote('calc(100vh - 50px)');
+  max-height: unquote('calc(100vh - 50px)');
+  position: relative;
+
+  :global {
+    //noinspection ALL
+    .react-pdf__Page {
+      background: #fafafa;
+      padding: 15px;
+    }
+
+    //noinspection ALL
+    .react-pdf__Page__canvas {
+      box-shadow: 0 0 10px rgba(#000, 0.1);
+      margin: 0 auto;
+    }
+  }
+}
+
+.viewer-inner {
+  height: 100%;
+  overflow: auto;
+}
+
+.scale {
+  background: #fff;
+  border-radius: 5px;
+  bottom: 10px;
+  opacity: 0.5;
+  padding: 7px 10px;
+  position: absolute;
+  right: 20px;
+  transition: all 0.2s ease;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1;
+  }
+}

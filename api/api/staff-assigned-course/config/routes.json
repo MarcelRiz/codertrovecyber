@@ -1,0 +1,72 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/staff-assigned-courses",
+      "handler": "staff-assigned-course.find",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasUserFilter",
+          "plugins::users-permissions.isCurrentUser"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-assigned-courses/count",
+      "handler": "staff-assigned-course.count",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasUserFilter",
+          "plugins::users-permissions.isCurrentUser"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-assigned-courses/:id",
+      "handler": "staff-assigned-course.findOne",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasIdParam",
+          "isStaffAssignedCourseOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/staff-assigned-courses",
+      "handler": "staff-assigned-course.create",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasUserBody",
+          "plugins::users-permissions.isCurrentUser"
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/staff-assigned-courses/:id",
+      "handler": "staff-assigned-course.update",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasIdParam",
+          "isStaffAssignedCourseOwner",
+          "isStaffAssignedCourseHasUserBody",
+          "plugins::users-permissions.isCurrentUser"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/staff-assigned-courses/:id",
+      "handler": "staff-assigned-course.delete",
+      "config": {
+        "policies": [
+          "isStaffAssignedCourseHasIdParam",
+          "isStaffAssignedCourseOwner"
+        ]
+      }
+    }
+  ]
+}

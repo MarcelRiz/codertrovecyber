@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_platforms",
+  "info": {
+    "name": "PaymentPlatform",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "subscription": {
+      "type": "string",
+      "required": true
+    },
+    "paymentStripeSessions": {
+      "via": "paymentPlatform",
+      "collection": "payment-stripe-session"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+FROM strapi/base:14-alpine
+
+RUN apk add wkhtmltopdf xvfb
+RUN apk add fontconfig freetype ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family
+
+RUN wkhtmltopdf --version
+
+ENV CHROME_BIN="/usr/bin/chromium-browser" \
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+RUN set -x \
+    && apk update \
+    && apk upgrade \
+    && apk add --no-cache \
+    udev \
+    ttf-freefont \
+    chromium \
+    && npm install puppeteer@1.10.0
+
+WORKDIR /srv/app
+
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
+RUN npm ci
+
+COPY . .
+
+ENV NODE_ENV production
+
+RUN npm run build
+
+EXPOSE 1337
+
+CMD ["npm", "start"]

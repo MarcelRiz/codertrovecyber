@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_stripe_activity_histories",
+  "info": {
+    "name": "PaymentStripeActivityHistory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activityType": {
+      "type": "string"
+    },
+    "paymentStripeSession": {
+      "via": "paymentStripeActivityHistories",
+      "model": "payment-stripe-session"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.blogManagement {
+  &List {
+    min-height: calc(100vh - 227px);
+  }
+  &Table {
+    min-height: calc(100vh - 290px);
+  }
+}
+
+.categorySelect {
+  display: block;
+  :global {
+    .ant-select-selector {
+      .ant-select-selection-search-input {
+        height: 100% !important;
+        padding: 0 0.6em !important;
+      }
+      .ant-select-selection-placeholder {
+        color: #4a5568;
+        opacity: 0.5;
+      }
+    }
+  }
+}

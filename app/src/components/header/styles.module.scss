@@ -1,0 +1,18 @@
+.menu-settings {
+  :global {
+    .dropdown-toggle {
+      margin-left: 10px;
+      margin-right: 10px;
+      @extend .nav-link-icon !optional;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    .dropdown-menu {
+      @extend .dropdown-menu-sm !optional;
+      @extend .dropdown-menu-arrow !optional;
+    }
+  }
+}

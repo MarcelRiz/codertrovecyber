@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_ratings",
+  "info": {
+    "name": "SecurityRating",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "decimal"
+    },
+    "people": {
+      "type": "decimal"
+    },
+    "process": {
+      "type": "decimal"
+    },
+    "technology": {
+      "type": "decimal"
+    },
+    "industry": {
+      "type": "decimal"
+    },
+    "user": {
+      "via": "securityRating",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "standard": {
+      "type": "decimal"
+    },
+    "companyId": {
+      "model": "company"
+    }
+  }
+}

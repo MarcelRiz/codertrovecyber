@@ -1,0 +1,89 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/action-items",
+      "handler": "action-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/action-items/count",
+      "handler": "action-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/action-items/:id/done",
+      "handler": "action-item.done",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated",
+          "plugins::users-permissions.isClient"
+        ],
+        "description": "policies plugins before as - isOwnedActionItem"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/action-items/:id",
+      "handler": "action-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/action-items",
+      "handler": "action-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/action-items/:id",
+      "handler": "action-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/action-items/:id",
+      "handler": "action-item.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/assessment/submit",
+      "handler": "assessment.submit",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated",
+          "plugins::users-permissions.isClient",
+          "isAssessmentCompleted",
+          "isGroupQuestionCompleted"
+        ]
+      },
+      "validations": {
+        "responseId": [
+          [
+            "isNotEmpty"
+          ]
+        ],
+        "groupId": [
+          [
+            "isNotEmpty"
+          ]
+        ]
+      }
+    }
+  ]
+}

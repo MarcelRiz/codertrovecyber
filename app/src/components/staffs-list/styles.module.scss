@@ -1,0 +1,17 @@
+.staff-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  margin-left: 1.4em;
+
+  input {
+    margin-bottom: 5%;
+  }
+}
+
+.action-btn {
+  &:after {
+    display: none;
+  }
+}

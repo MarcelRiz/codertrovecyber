@@ -1,0 +1,66 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/checkins",
+      "handler": "checkin.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/checkins/count",
+      "handler": "checkin.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/checkins/:id",
+      "handler": "checkin.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/checkins",
+      "handler": "checkin.create",
+      "config": {
+        "policies": []
+      },
+      "validations": {
+        "name": [
+          [
+            "isLength",
+            {
+              "min": 0,
+              "max": 4
+            }
+          ],
+          [
+            "isNotEmpty"
+          ]
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/checkins/:id",
+      "handler": "checkin.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/checkins/:id",
+      "handler": "checkin.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

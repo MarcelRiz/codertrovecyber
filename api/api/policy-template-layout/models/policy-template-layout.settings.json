@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "policy_template_layouts",
+  "info": {
+    "name": "PolicyTemplateLayout"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

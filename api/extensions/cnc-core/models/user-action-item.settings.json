@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_action_items",
+  "info": {
+    "name": "UserActionItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "actionItem": {
+      "via": "userActionItems",
+      "model": "action-item"
+    },
+    "user": {
+      "via": "userActionItems",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "unresolved",
+        "resolved"
+      ],
+      "default": "unresolved"
+    },
+    "customActionItem": {
+      "via": "userActionItems",
+      "model": "custom-action-item"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "actionItem",
+        "customActionItem"
+      ],
+      "default": "actionItem"
+    },
+    "company": {
+      "model": "company"
+    },
+    "category": {
+      "type": "string"
+    },
+    "controlMapping": {
+      "type": "string"
+    }
+  }
+}

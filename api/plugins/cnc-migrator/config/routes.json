@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "cnc-migrator.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

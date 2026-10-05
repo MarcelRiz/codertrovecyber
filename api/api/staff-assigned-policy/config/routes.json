@@ -1,0 +1,73 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/staff-assigned-policies",
+      "handler": "staff-assigned-policy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-assigned-policies/count",
+      "handler": "staff-assigned-policy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-assigned-policies/:id",
+      "handler": "staff-assigned-policy.findOne",
+      "config": {
+        "policies": [
+          "isStaffAssignedPolicyHasIdParam",
+          "isStaffAssignedPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/staff-assigned-policies",
+      "handler": "staff-assigned-policy.create",
+      "config": {
+        "policies": [
+          "isStaffAssignedPolicyHasUserBody",
+          "plugins::users-permissions.isCurrentUser"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/staff-assigned-policies/bulk",
+      "handler": "staff-assigned-policy.bulkAssignPolicies",
+      "config": {
+        "policies": [
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/staff-assigned-policies/:id",
+      "handler": "staff-assigned-policy.update",
+      "config": {
+        "policies": [
+          "isStaffAssignedPolicyHasIdParam",
+          "isStaffAssignedPolicyOwner"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/staff-assigned-policies/:id",
+      "handler": "staff-assigned-policy.delete",
+      "config": {
+        "policies": [
+          "isStaffAssignedPolicyHasIdParam",
+          "isStaffAssignedPolicyOwner"
+        ]
+      }
+    }
+  ]
+}

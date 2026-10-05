@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_groups",
+  "info": {
+    "name": "QuestionGroup",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "typeformQuestionId": {
+      "type": "string"
+    },
+    "userQuestionGroups": {
+      "private": true,
+      "via": "questionGroup",
+      "plugin": "cnc-core",
+      "collection": "user-question-group"
+    },
+    "isFree": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

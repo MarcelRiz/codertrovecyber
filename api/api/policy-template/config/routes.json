@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/policy-templates",
+      "handler": "policy-template.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/policy-templates/count",
+      "handler": "policy-template.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/policy-templates/:id",
+      "handler": "policy-template.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/policy-templates",
+      "handler": "policy-template.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/policy-templates/:id",
+      "handler": "policy-template.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/policy-templates/:id",
+      "handler": "policy-template.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

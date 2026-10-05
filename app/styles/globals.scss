@@ -1,0 +1,114 @@
+@import '~bootstrap/scss/functions';
+
+@import 'core/functions';
+
+@import 'core/variables';
+
+@import 'custom/fonts';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import 'core/mixins';
+
+@import 'core/bootstrap';
+
+@import 'core/utilities';
+
+@import 'core/components';
+
+@import 'core/libs';
+
+@import '~react-quill/dist/quill.snow.css';
+@import '~react-toastify/dist/ReactToastify.css';
+
+@import 'antd/dist/antd.css';
+@import 'cropperjs/dist/cropper.css';
+
+// @import 'react-lazy-load-image-component/src/effects/blur.css';
+
+.main-wrapper {
+  min-height: 100vh;
+}
+
+.pdf-viewer {
+  box-shadow: 0 0 10px rgba(#000000, 0.1);
+  height: unquote('calc(100vh - 50px)');
+  max-height: unquote('calc(100vh - 50px)');
+  position: relative;
+  border-radius: 10px;
+  border: solid 1px $light;
+
+  .react-pdf__Page {
+    background: #fafafa;
+    padding: 15px;
+  }
+
+  .react-pdf__Page__canvas {
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    margin: 0 auto;
+  }
+
+  &__inner {
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__scale {
+    background: #fff;
+    border-radius: 5px;
+    bottom: 10px;
+    opacity: 0.5;
+    padding: 7px 10px;
+    position: absolute;
+    right: 20px;
+    transition: all 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--loading {
+    .pdf-viewer__inner {
+      opacity: 0;
+    }
+  }
+}
+
+.styles_close__1vuKC {
+  position: absolute;
+  align-items: center;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  font-size: 2rem;
+  height: 60px;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  max-height: 60;
+  max-width: 60;
+  position: absolute;
+  right: 10;
+  top: 10;
+  width: 60;
+  z-index: 1;
+}
+
+.bar-of-progress {
+  color: $primary !important;
+}
+
+.ant-table-wrapper {
+  .ant-table-thead > tr > th {
+    background-color: #fafbfe !important;
+    font-weight: bold;
+  }
+
+  .ant-table-tbody > tr > td {
+    background-color: #fafbfe !important;
+  }
+}

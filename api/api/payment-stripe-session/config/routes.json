@@ -1,0 +1,82 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment-stripe-sessions",
+      "handler": "payment-stripe-session.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-stripe-sessions/count",
+      "handler": "payment-stripe-session.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-stripe-sessions/:id",
+      "handler": "payment-stripe-session.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-stripe-sessions",
+      "handler": "payment-stripe-session.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment-stripe-sessions/:id",
+      "handler": "payment-stripe-session.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payment-stripe-sessions/:id",
+      "handler": "payment-stripe-session.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-stripe-sessions/webhook",
+      "handler": "payment-stripe-session.stripeTradingActionCreateClient",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Stripe payment register a new user with the client role"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-stripe-sessions/session/:id",
+      "handler": "payment-stripe-session.getStripeSession",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Check session Stripe payment"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment-stripe-sessions/session/:id",
+      "handler": "payment-stripe-session.UpdateStripeSession",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Update session Stripe payment"
+      }
+    }
+  ]
+}

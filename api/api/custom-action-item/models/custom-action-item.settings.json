@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_action_items",
+  "info": {
+    "name": "CustomActionItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "actionItemSummary": {
+      "type": "string"
+    },
+    "actionItemDetails": {
+      "type": "string"
+    },
+    "actionItemSource": {
+      "type": "enumeration",
+      "enum": [
+        "checkin",
+        "report"
+      ]
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "userActionItems": {
+      "via": "customActionItem",
+      "plugin": "cnc-core",
+      "collection": "user-action-item"
+    },
+    "category": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "securityDomain": {
+      "type": "string"
+    },
+    "controlMapping": {
+      "type": "string"
+    }
+  }
+}

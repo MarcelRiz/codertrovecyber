@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/package",
+      "handler": "package.findAllPackage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/package/:id",
+      "handler": "package.findOnePackage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/package",
+      "handler": "package.createPackage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/package/:id",
+      "handler": "package.updatePackage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/package/:id",
+      "handler": "package.removePackage",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+}
+
+.card-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0;
+  overflow: hidden;
+  padding-top: calc(3 * 100% / 4);
+  width: 100%;
+}
+
+.course-title {
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

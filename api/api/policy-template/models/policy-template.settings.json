@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "policy_templates",
+  "info": {
+    "name": "PolicyTemplate",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "templateContent": {
+      "type": "richtext",
+      "private": true
+    },
+    "policyTemplateLayout": {
+      "model": "policy-template-layout"
+    },
+    "isFree": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+<body>
+  <h3>Purpose of this Policy</h3>
+  <p>The purpose of this policy is to describe what steps must be taken to ensure that users connecting to the corporate network are authenticated in an appropriate manner, in compliance with company standards, and are given the least amount of access required to perform their job function. This policy specifies what constitutes appropriate use of network accounts and authentication standards. This policy also outlines {Company_Name}'s procedures for securing guest access.</p>
+  <h3>Policy Statements</h3>
+  <h4>Account Setup</h4>
+  <p>Company_Namerequires that potential personnel be screened prior to hire. The level of screening should be appropriate to the position, with more in-depth background checks required for personnel with greater responsibilities or access to confidential information. Examples of acceptable screening methods include checking employment history, criminal records, credit history, and reference checks).</p>
+  <p>During initial account setup, certain checks must be performed in order to ensure the integrity of the process. The following policies apply to account setup:</p>
+  <ul>
+    <li>Positive ID and coordination with Human Resources is required.</li>
+    <li>Users will be granted access only if he or she agrees to the applicable network use policies, such as the Acceptable Use Policy.</li>
+    <li>Access to the network will only be granted in accordance with applicable policies, such as the Acceptable Use Policy.</li>
+    <li>The ability to add, delete, and change user IDs, user credentials, user privileges, and other account-related activities, must be limited as much as possible, such as to a small group of administrators with specific authority to make these changes.</li>
+    <li>During initial account setup, or during a password reset, the account must be assigned a unique password, which must be changed immediately after the first use. Company_Namemust not use the same password for every new account or password reset.</li>
+  </ul>
+  <h4>Account Access Levels</h4>
+  <p>It is company policy to follow the principle of least privilege, where employees will be provided the least amount of access required to perform their job functions. This is particularly important as it relates to high security zones, such as the Cardholder Data Environment. Any user account with access to these zones must be given the minimum amount of access possible.</p>
+  <p>Access levels must be assigned solely based on job classification or function (role-based access control). Documentation must be kept that details each user’s level of access as well as approval of that access by authorised parties.</p>
+  <p>An access control system must be utilised that enforces this policy and restricts users’ access to data based on defined access levels. This system must enforce the principle of least access and have a default “deny all” setting for new or unrecognised users.</p>
+  <h4>Account Use</h4>
+  <p>Network accounts must be implemented in a standard fashion and utilised consistently across the organisation. The following policies apply to account use:</p>
+  <ul>
+    <li>Accounts must be created using a standard format</li>
+    <li>Accounts must be password protected (refer to the Password Policy for more detailed information).</li>
+    <li>Accounts must be for individuals only. Account sharing and group accounts are not permitted.</li>
+    <li>User accounts must not be given administrator or 'root' access unless this is necessary to perform their job function. All actions taken by individuals logged in with root or administrative privileges will be logged.</li>
+    <li>Occasionally, guests will have a legitimate business need for access to the corporate network. When a reasonable need is demonstrated, temporary guest access is allowed. This access, however, must be severely restricted to only those resources that the guest needs at that time and disabled when the guest's work is completed. Refer to the Guest Access Policy for additional guidance.</li>
+    <li>Individuals requiring access to confidential data must have an individual, distinct account. This account may be subject to additional monitoring or auditing at the discretion of the Information Security Manager or executive team, or as required by applicable regulations or third-party agreements.</li>
+  </ul>
+  <h4>Account Termination</h4>
+  <p>When managing network and user accounts, it is important to stay in communication with the Human Resources department so that when an employee no longer works at {Company_Name}, that employee's account can be disabled. Human Resources must create a process to notify the Information Security Manager in the event of a staffing change, which includes employment termination, employment suspension, or a change of job function (promotion, demotion, suspension, etc.) that will result in changes in access levels. Access for terminated employees must be immediately revoked. Additionally, Company_Namemust audit user accounts every 90 days and remove or disable any accounts that are inactive.</p>
+  <h4>Authentication</h4>
+  <p>User systems must be configured to request authentication against a central network authentication manager, such as a domain, at start-up. If this authentication mechanism is not available or authentication for some reason cannot occur, then the system must not be permitted to access the network. Any session that has been idle for more than 15 minutes should be terminated, requiring the user to re-authenticate in order to activate the session again.</p>
+  <p>Any access to a database containing confidential or cardholder data must require authentication, whether the access is by applications, administrators, or users. Company_Namemust restrict direct database access to only database administrators. Company_Nameshould only allow database access through programmatic methods, such as stored procedures, rather than direct access whenever possible.</p>
+  <h4>Use of Passwords</h4>
+  <p>When accessing the network locally, username and password is an acceptable means of authentication. Usernames must be consistent with the requirements set forth in this document, and passwords must conform to {Company_Name}'s Password Policy.</p>
+  <p>Company_Namemust implement password management technology that requires users to change their passwords every 90 days. Further, the password management solution must not allow the re-use of any of the user’s last four passwords.</p>
+  <h4>Screensaver Passwords</h4>
+  <p>Screensaver passwords offer an easy way to strengthen security by removing the opportunity for a malicious user, curious employee, or intruder to access network resources through an idle computer. For this reason, screensaver passwords are required, and must be configured to activate after 5 minutes of inactivity.</p>
+  <h4>Minimum Configuration for Access</h4>
+  <p>Any system connecting to the network can have a serious impact on the security of the entire network. A vulnerability, virus, or other malware may be inadvertently introduced in this manner. For this reason, users must strictly adhere to corporate standards with regard to antivirus software and patch levels on their systems. Users must not be permitted to access the network if these standards are not met. This policy will be enforced with a product that provides network admission control, or through other security controls that forbid access unless explicitly provided.</p>
+  <h4>Encryption of Login Credentials</h4>
+  <p>Industry best practices state that username and password combinations must never be sent as plain text. If this information were intercepted, it could result in a serious security incident. Therefore, authentication credentials must be encrypted during transmission across any network, whether the transmission occurs internal to Company_Namenetwork or across a public network such as the Internet. Username and passwords are considered confidential data, and further guidance regarding the treatment of this data can be found in the Confidential Data Policy.</p>
+  <h4>Failed Login Attempts</h4>
+  <p>Repeated login failures can indicate an attempt to 'crack' a password and surreptitiously access a network account. In order to guard against password-guessing and brute-force attempts, Company_Namemust lock a user's account after 3 unsuccessful logins. This can be implemented as a time-based lockout (for a minimum of 30 minutes) or require a manual reset, at the discretion of the Information Security Manager.</p>
+  <p>In order to protect against account guessing, when login failures occur the error message transmitted to the user must not indicate specifically whether the account name or password were incorrect. The error can be as simple as "the credentials you supplied were incorrect."</p>
+  <h4>Granting Guest Access</h4>
+  <p>Guest access will be provided on a case-by-case basis to any person who can demonstrate a reasonable business need to access the network or access the Internet from Company_Namenetwork.</p>
+  <h5>AUP Acceptance</h5>
+  <p>Guests must agree to and sign {Company_Name}'s Acceptable Use Policy (AUP) before being granted access. A process must be developed and implemented to disseminate the AUP to guests and provide access accordingly. With management and legal approval, a subset of the AUP may be used if Internet-only access is to be provided to guests.</p>
+  <h5>Approval</h5>
+  <p>Guest need for access will be evaluated and provided on a case-by-case basis. This must involve management approval if the request is non-standard. A non-standard request would be a request that involves access to company systems (i.e., more than just Internet-only) that is not already covered by a service agreement approved by management.</p>
+  <h5>Account Use</h5>
+  <p>Guest accounts, if offered, are only to be used by guests. Users with network accounts must use their accounts for network access. Guest accounts must be set up for each guest accessing {Company_Name}'s network. Guest accounts must have specific expiration dates that correlate to the business need for the individual guest's access. The account expiration date is not to exceed either A) the expected duration of the guest’s need for access or, B) thirty days, whichever is sooner.</p>
+  <h5>Security of Guest Systems</h5>
+  <p>Guests are expected to be responsible for maintaining the security of their system, and to ensure that it is free of viruses, Trojans, malware, etc. Company_Namereserves the right to inspect the system if a security problem is suspected but will not inspect each guest's system prior to accessing the network.</p>
+  <p>Company_Namewill use security controls as necessary to keep the network safe from threats that may be introduced from guest computers. This will include network segmentation, as well as potentially other tools, such as Intrusion Detection or Intrusion Prevention Systems, monitoring, anti-malware, or other security controls as deemed necessary by the Information Security Manager.</p>
+  <h4>Guest Access Infrastructure Requirements</h4>
+  <p>Best practices dictate that guest access be kept separate, either logically or physically, from corporate the network, since guests have typically not undergone the same amount of scrutiny as {Company_Name}'s employees. At a minimum, guest access must be logically separated from {Company_Name}'s network via a demilitarised zone (DMZ), firewall, or other access controls. Guest access must be provided prudently and monitored for appropriateness of use.</p>
+  <h4>Restrictions on Guest Access</h4>
+  <p>Guest access will be restricted to the minimum amount necessary. Depending on the guest needing access, this can often be limited to outbound Internet access only. Company_Namewill evaluate the need of each guest and provide further access if there is a business need to do so.</p>
+  <h4>Monitoring of Guest Access</h4>
+  <p>Since guests are not employees of {Company_Name}, they are not considered trusted users. As such, Company_Namewill monitor guest access to ensure that {Company_Name}'s interests are protected, and its security policies are adhered to.</p>
+</body></html>

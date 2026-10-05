@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/manage-scanning",
+      "handler": "manage-scanning.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/manage-scanning",
+      "handler": "manage-scanning.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/manage-scanning/:id",
+      "handler": "manage-scanning.remove",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/manage-scanning/:id",
+      "handler": "manage-scanning.update",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

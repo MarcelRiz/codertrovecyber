@@ -1,0 +1,96 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/custom-action-items",
+      "handler": "custom-action-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/custom-action-items/count",
+      "handler": "custom-action-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/custom-action-items/:id",
+      "handler": "custom-action-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/custom-action-items",
+      "handler": "custom-action-item.create",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated"
+        ]
+      },
+      "validations": {
+        "actionItemSummary": [
+          [
+            "isNotEmpty"
+          ]
+        ],
+        "actionItemSource": [
+          [
+            "isNotEmpty"
+          ],
+          [
+            "isIn",
+            [
+              "checkin",
+              "report"
+            ]
+          ]
+        ],
+        "priority": [
+          [
+            "isNotEmpty"
+          ],
+          [
+            "isIn",
+            [
+              "high",
+              "medium",
+              "low"
+            ]
+          ]
+        ],
+        "userId": [
+          [
+            "isNotEmpty"
+          ]
+        ],
+        "category": [
+          [
+            "isNotEmpty"
+          ]
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/custom-action-items/:id",
+      "handler": "custom-action-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/custom-action-items/:id",
+      "handler": "custom-action-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

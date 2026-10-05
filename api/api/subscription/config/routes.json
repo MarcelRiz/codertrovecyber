@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/subscription/webhook",
+      "handler": "subscription.subscriptionEventHandler",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Receive subscription events"
+      }
+    }
+  ]
+}

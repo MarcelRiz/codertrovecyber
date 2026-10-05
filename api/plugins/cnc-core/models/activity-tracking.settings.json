@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_trackings",
+  "info": {
+    "name": "ActivityTracking",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "request": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "os": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "browser": {
+      "type": "text"
+    },
+    "payload": {
+      "type": "json"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "activityTrackings"
+    }
+  }
+}

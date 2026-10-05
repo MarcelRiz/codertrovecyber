@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment-stripe-activity-histories",
+      "handler": "payment-stripe-activity-history.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-stripe-activity-histories/count",
+      "handler": "payment-stripe-activity-history.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-stripe-activity-histories/:id",
+      "handler": "payment-stripe-activity-history.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-stripe-activity-histories",
+      "handler": "payment-stripe-activity-history.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment-stripe-activity-histories/:id",
+      "handler": "payment-stripe-activity-history.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payment-stripe-activity-histories/:id",
+      "handler": "payment-stripe-activity-history.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

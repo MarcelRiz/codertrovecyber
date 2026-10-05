@@ -1,0 +1,8 @@
+.userManagement {
+  &List {
+    min-height: calc(100vh - 227px);
+  }
+  &Table {
+    min-height: calc(100vh - 290px);
+  }
+}

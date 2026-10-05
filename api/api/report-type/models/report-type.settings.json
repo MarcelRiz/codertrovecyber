@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_types",
+  "info": {
+    "name": "ReportType",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

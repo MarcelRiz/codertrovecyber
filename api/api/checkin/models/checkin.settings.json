@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkins",
+  "info": {
+    "name": "Checkin"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "meetingNotes": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "admin": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

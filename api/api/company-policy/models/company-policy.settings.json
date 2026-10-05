@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_policies",
+  "info": {
+    "name": "CompanyPolicy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "datetime"
+    },
+    "isLive": {
+      "type": "boolean"
+    },
+    "policyFile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "company": {
+      "model": "company"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "CompanyPolicy",
+        "CyberSecurity"
+      ],
+      "required": true
+    },
+    "policyTemplate": {
+      "model": "policy-template"
+    },
+    "policyContent": {
+      "type": "richtext"
+    },
+    "staffAssignedPolicies": {
+      "via": "companyPolicy",
+      "collection": "staff-assigned-policy"
+    }
+  }
+}

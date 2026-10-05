@@ -1,0 +1,75 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/question-groups",
+      "handler": "question-group.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/question-groups/count",
+      "handler": "question-group.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/question-groups/:id",
+      "handler": "question-group.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/question-groups",
+      "handler": "question-group.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/question-groups/user-response",
+      "handler": "question-group.getUserResponse",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.isAuthenticated",
+          "plugins::users-permissions.isAdmin"
+        ]
+      },
+      "validations": {
+        "responseId": [
+          [
+            "isNotEmpty"
+          ]
+        ],
+        "groupId": [
+          [
+            "isNotEmpty"
+          ]
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/question-groups/:id",
+      "handler": "question-group.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/question-groups/:id",
+      "handler": "question-group.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

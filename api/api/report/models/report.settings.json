@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "name": "Report",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "datetime"
+    },
+    "reportRead": {
+      "type": "boolean"
+    },
+    "reportType": {
+      "model": "report-type"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "pdf": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

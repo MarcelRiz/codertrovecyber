@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkin_comments",
+  "info": {
+    "name": "CheckinComment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "checkin": {
+      "model": "checkin"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

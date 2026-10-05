@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_assigned_policies",
+  "info": {
+    "name": "StaffAssignedPolicy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "via": "staffAssignedPolicies",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "companyPolicy": {
+      "model": "company-policy",
+      "via": "staffAssignedPolicies"
+    },
+    "isAcknowledged": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

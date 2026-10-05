@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/checkin-comments",
+      "handler": "checkin-comment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/checkin-comments/count",
+      "handler": "checkin-comment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/checkin-comments/:id",
+      "handler": "checkin-comment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/checkin-comments",
+      "handler": "checkin-comment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/checkin-comments/:id",
+      "handler": "checkin-comment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/checkin-comments/:id",
+      "handler": "checkin-comment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

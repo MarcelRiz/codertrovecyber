@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/functions";
+
+// Quick functions
+@import "core/functions";
+
+@import "core/variables";
+
+// Custom fonts
+@import "custom/fonts";
+
+// Bootstrap core
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Quick mixins
+@import "core/mixins";
+
+// Bootstrap components
+@import "core/bootstrap";
+
+// Quick utilities
+@import "core/utilities";
+
+// Quick components
+@import "core/components";
+
+// Quick libs
+@import "core/libs";
+
+// Custom styles (User's file)
+@import "custom/styles";

@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/admin-zone/dashboard-summary",
+      "handler": "admin-zone.dashboardSummary",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

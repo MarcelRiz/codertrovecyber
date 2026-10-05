@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "action_items",
+  "info": {
+    "name": "ActionItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "actionItemDetails": {
+      "type": "text"
+    },
+    "actionItemSummary": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "questionReferenceID": {
+      "type": "json"
+    },
+    "securityDomain": {
+      "type": "string"
+    },
+    "controlMapping": {
+      "type": "string"
+    },
+    "goodChoices": {
+      "type": "json"
+    },
+    "questionTitle": {
+      "type": "text"
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "userActionItems": {
+      "via": "actionItem",
+      "plugin": "cnc-core",
+      "collection": "user-action-item"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/companies",
+      "handler": "company.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/count",
+      "handler": "company.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/:id",
+      "handler": "company.findOne",
+      "config": {
+        "policies": [
+          "isCompanyHasIdParam",
+          "isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/companies",
+      "handler": "company.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/companies/:id",
+      "handler": "company.update",
+      "config": {
+        "policies": [
+          "isCompanyHasIdParam",
+          "isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/companies/:id",
+      "handler": "company.delete",
+      "config": {
+        "policies": [
+          "isCompanyHasIdParam",
+          "isCompanyOwner"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/:id/summary",
+      "handler": "company.summary",
+      "config": {
+        "policies": [
+          "isCompanyHasIdParam",
+          "isCompanyOwner"
+        ]
+      }
+    }
+  ]
+}

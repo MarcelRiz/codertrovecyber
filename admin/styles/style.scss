@@ -1,0 +1,32 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+// react-toastify
+@import '~react-toastify/dist/ReactToastify.css';
+// ant design
+@import 'antd/dist/antd.css';
+
+
+.continuum {
+  $primary: #361766 !default;
+  $danger: #a138d8;
+  @import "./globals.scss";
+}
+
+.mackay {
+  $primary: #1C5E48 !default;
+  $danger: #f54d63;
+  @import "./globals.scss";
+}
+
+.scotpac {
+  $primary: #4615d6 !default;
+  $danger: #f54d63;
+  @import "./globals.scss";
+}

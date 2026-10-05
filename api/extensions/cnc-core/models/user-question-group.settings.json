@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_question_groups",
+  "info": {
+    "name": "UserQuestionGroup",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "typeformResponseId": {
+      "type": "string"
+    },
+    "questionGroup": {
+      "via": "userQuestionGroups",
+      "model": "question-group"
+    },
+    "user": {
+      "via": "userQuestionGroups",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "model": "company"
+    }
+  }
+}

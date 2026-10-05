@@ -1,0 +1,42 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+<body>
+  <h3>Purpose of this Policy</h3>
+  <p>The purpose of this policy is to provide a consistent framework to apply to the backup process. The policy will provide specific information to ensure backups are available and useful when needed - whether to simply recover a specific file or when a larger-scale recovery effort is needed.</p>
+  <p3>Policy Statements</p3>
+  <h4>Identification of Critical Data</h4>
+  <p>{Company_Name} must identify what data is most critical to its organisation. This can be done through a formal data classification process or through an informal review of information assets. Regardless of the method, critical data must be identified so that it can be given the highest priority during the backup process.</p>
+  <p>Any data deemed confidential must be identified so that backups of this data are treated and secured accordingly. Further information about storing confidential data can be found in the Confidential Data and Retention Policies.</p>
+  <h4>Data to be Backed Up</h4>
+  <p>A backup policy must balance the importance of the data to be backed up with the burden such backups place on the users, network resources, and the backup administrator. Data to be backed up will include:</p>
+  <ul>
+    <li>All data determined to be critical to company operation and/or employee job function.</li>
+    <li>All information stored on the corporate file server(s) and email server(s). It is the user's responsibility to ensure any data of importance is moved to the file server.</li>
+    <li>All information stored on network servers, which may include web servers, database servers, domain controllers, firewalls, and remote access servers, etc.</li>
+    <li>Logs and configuration information from network devices such as switches, routers, IDS/IPS systems, etc.</li>
+  </ul>
+  <h4>Backup Frequency</h4>
+  <p>Backup frequency is critical to successful data recovery. {Company_Name} has determined that the following backup schedule will allow for sufficient data recovery in the event of an incident, while avoiding an undue burden on the users, network, and backup administrator.</p>
+  <ul>
+    <li>Incremental backup frequency: every day</li>
+    <li>Full backup frequency: every week</li>
+  </ul>
+  <h4>Off-Site Rotation</h4>
+  <p>Geographic separation from the backups must be maintained, to some degree, in order to protect from fire, flood, or other regional or large-scale catastrophes. Offsite storage must be balanced with the time required to recover the data, which must meet {Company_Name}'s uptime requirements. {Company_Name} has determined that backup media must be rotated off-site at least once per week.</p>
+  <h4>Backup Storage</h4>
+  <p>Storage of backups is a serious issue and one that requires careful consideration. Since backups contain critical, and often confidential, company data, precautions must be taken that are commensurate to the type of data being stored. {Company_Name} has set the following guidelines for backup storage.</p>
+  <p>When stored onsite, backup media must be stored in a fireproof container in an access-controlled area. When shipped offsite, a hardened facility (i.e., commercial backup service) that uses accepted methods of environmental controls, including fire suppression, and security processes must be used to ensure the integrity of the backup media. If a backup service is used, rigorous security procedures must be developed and maintained, which will include, at minimum, credential-verification and signature of the backup service courier. Online backups are allowable if the service meets the criteria specified herein. Confidential data must be encrypted using industry-standard, strong encryption to protect {Company_Name} against data loss.</p>
+  <p>Note that any third parties involved in the backup process or backup storage must be subjected to the due diligence process as specified in the Outsourcing Policy. The security of backup locations, particularly when a third party is involved, must be reviewed at least annually.</p>
+  <h4>Backup Retention</h4>
+  <p>When determining the time required for backup retention, {Company_Name} must determine what number of stored copies of backup-up data is sufficient to effectively mitigate risk while preserving required data. {Company_Name} has determined that the following will meet all requirements (note that the backup retention policy must confirm to {Company_Name}'s data retention policy and any applicable industry):</p>
+  <ul>
+    <li>Incremental Backups: must be saved for one month.</li>
+    <li>Full Backups: must be saved for six months.</li>
+    <li>Note that backup retention requirements differ, in some cases, from data retention requirements. {Company_Name} must ensure that policies on data retention are followed. If the policies conflict, the greater retention time will apply.</li>
+  </ul>
+  <h4>Restoration Procedures & Documentation</h4>
+  <p>The data restoration procedures must be tested and documented. Documentation must include exactly who is responsible for the restore, how it is performed, under what circumstances it is to be performed, and how long the process should take from request to restoration. It is extremely important that the procedures are clear and concise such that they are not A) misinterpreted by readers other than the backup administrator, and B) confusing during a time of crisis. The procedure documentation must be appended to this policy.</p>
+  <h4>Restoration Testing</h4>
+  <p>Since a backup policy does no good if the restoration process fails, it is important to periodically test the restore procedures to eliminate potential problems.</p>
+  <p>Backup restores must be tested when any change is made that may affect the backup system, as well as once every month.</p>
+  <h4>Expiration of Backup Media</h4>
+</body></html>

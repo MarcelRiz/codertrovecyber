@@ -1,0 +1,45 @@
+{
+  "paths": {
+    "/company-policies/generate-cyber-policies/{companyId}": {
+      "post": {
+        "description": "Generate cyber policies for a company",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "policyTemplateIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int64"
+                    }
+                  },
+                  "owner": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+       
+      }
+    }
+  }
+}

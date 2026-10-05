@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "market_place_services",
+  "info": {
+    "name": "MarketPlaceService"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "enquiryEmailLink": {
+      "type": "string"
+    }
+  }
+}

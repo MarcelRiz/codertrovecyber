@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/scanning-history",
+      "handler": "scanning-history.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/scanning-history/:id",
+      "handler": "scanning-history.findOne",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

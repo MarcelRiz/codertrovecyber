@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_settings",
+  "info": {
+    "name": "AppSetting"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "systemEmail": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "file_google_storages",
+  "info": {
+    "name": "FileGoogleStorage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "pathName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "publicUrl": {
+      "type": "string"
+    }
+  }
+}

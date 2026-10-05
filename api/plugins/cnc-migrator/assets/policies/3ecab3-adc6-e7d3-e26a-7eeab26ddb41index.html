@@ -1,0 +1,228 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+<body>
+  <h3>Purpose of this Policy</h3>
+  <p>The purpose of this policy is to establish the technical guidelines for IT security, and to communicate the controls necessary for a secure network infrastructure. The network security policy will provide the practical mechanisms to support {Company_Name}'s comprehensive set of security policies.</p>
+  <h3>Policy Statements</h3>
+  <h4>Network Security Controls</h4>
+  <p>A compromised password on a network device could have devastating, network-wide consequences. Passwords that are used to secure these devices, such as routers, switches, and servers, must be held to higher standards than user-level or desktop system passwords.</p>
+  <h5>Network Device Password Construction</h5>
+  <p>Passwords can be a weak link in a security infrastructure. Because of this, the organisation specifies that two-factor authentication be used for network devices. This may be in the form of a smart card, hardware or software token, biometrics, or another method that greatly enhances security.</p>
+  <p>The organisation recognises, however, that not every system (internal and external) is compatible with two-factor authentication, or that two-factor authentication isn’t practical. In these situations, management must be notified, and a strong password selected. Where a password must be used, the organisation mandates that users adhere to the following guidelines on password construction:</p>
+  <ul>
+    <li>Passwords must be at least 8 characters.</li>
+    <li>Passwords must be comprised of a mix of letters, numbers and special characters (punctuation marks and symbols).</li>
+    <li>Passwords must be comprised of a mix of upper- and lower-case characters.</li>
+    <li>Passwords must not be words that can be found in a dictionary.</li>
+    <li>Passwords must not be comprised of an obvious keyboard sequence (i.e., qwerty).</li>
+    <li>Passwords must not include "guessable" data such as personal information like birthdays, addresses, phone numbers, locations, etc.</li>
+  </ul>
+  <h5>Failed Logins to Network Devices</h5>
+  <p>Repeated login failures can indicate an attempt to 'crack' a password and surreptitiously access a network account. In order to guard against password-guessing and brute-force attempts, {Company_Name} must lock a user's account after 3 unsuccessful logins. This can be implemented as a time-based lockout or require a manual reset, at the discretion of the Information Security Manager.</p>
+  <p>In order to protect against account guessing, when login failures occur the error message transmitted to the user must not indicate specifically whether the account name or password were incorrect. The error can be as simple as "the login credentials you supplied were incorrect."</p>
+  <h5>Network Device Default Value Change Requirements</h5>
+  <p>Passwords must be changed according to {Company_Name}'s Password Policy. Additionally, the following requirements apply to changing network device defaults:</p>
+  <p>Vendor defaults are easy for an attacker to guess and can lead to a major security incident. For this reason, {Company_Name} requires that all vendor default values be changed prior to a new device being installed on the network. This includes but is not limited to:</p>
+  <ul>
+    <li>Encryption keys</li>
+    <li>SNMP Strings</li>
+    <li>Passwords/passphrases</li>
+  </ul>
+  <p>Additionally, these values must be changed when someone who has knowledge of the existing values leaves {Company_Name}, changes position, or any time there is a suspected security incident relating to these devices, even peripherally. This statement also applies to any consultant or contractor who has access to administrative passwords.</p>
+  <p>If any network device password is suspected to have been compromised, all network device passwords must be changed immediately.</p>
+  <h5>Password Policy Enforcement</h5>
+  <p>Where passwords are used, technology must be implemented that enforces {Company_Name}'s password policies on construction, changes, re-use, lockout, etc.</p>
+  <h5>Administrative Password Guidelines</h5>
+  <p>As a general rule, administrative (also known as "root") access to systems must be limited to only those who have a legitimate business need for this type of access. This is particularly important for network devices, since administrative changes can have a major effect on the network, and, as such, network security. Additionally, administrative access to network devices must be logged.</p>
+  <h4>Logging</h4>
+  <p>The logging of certain events is an important component of good network management practices. Logs contained on application servers, network devices, and critical systems may all contain different data, but all contain valuable information that {Company_Name} must record. Thus, {Company_Name} requires that logging on network-level devices must be enabled to the fullest degree possible. No passwords must be contained in logs.</p>
+  <h5>Log Management</h5>
+  <p>While logging is important to {Company_Name}'s network security, log management can become burdensome if not implemented appropriately. As logs grow, so does the time required to review and manage the logs. For this reason, {Company_Name} recommends that a log management application be considered.</p>
+  <h5>Log Review</h5>
+  <p>Device logs do little good if they are not reviewed on a regular basis. Log management applications can assist in highlighting important events; however, a member of {Company_Name}'s IT team must review logs on critical and high-security devices at least daily.</p>
+  <h5>Log Retention</h5>
+  <logs>must be retained in accordance with {Company_Name}'s Retention Policy. Unless known to contain non-proprietary or public data, {Company_Name} must classify network device logs as confidential data.</logs>
+  <h4>Audit Trails</h4>
+  <p>Audit trails are similar to logging, and typically are created from logs, but differ in that audit trails are typically chronological and designed to allow for the reconstruction and examination of the activities surrounding network and system events.</p>
+  <h5>Audit Trail Process</h5>
+  <p>{Company_Name} must establish a process for linking all access to system components, particularly access done with administrative privileges, back to individual users. Audit trails must be implemented that allow the reconstruction of the following events:</p>
+  <ul>
+    <li>Individual access to sensitive or personal data.</li>
+    <li>Actions taken with administrative/root privileges.</li>
+    <li>Access to audit trails.</li>
+    <li>Invalid logical access attempts.</li>
+    <li>Use of authentication mechanisms.</li>
+    <li>Initialisation of audit logs.</li>
+    <li>Creation and deletion of system-level objects.</li>
+    <li>Audit trails must be retained for at least one year, with a minimum of three months available for immediate analysis.</li>
+  </ul>
+  <h5>What to Record</h5>
+  <p>{Company_Name} must record at least the following entries for all system components for each event, so that a potential compromise can be quickly identified with sufficient detail to investigate the situation:</p>
+  <ul>
+    <li>User identification.</li>
+    <li>Type of event.</li>
+    <li>Date and time of event.</li>
+    <li>Success or failure indication.</li>
+    <li>Origination of event.</li>
+    <li>Identity or name of affected data, system component, or resources.</li>
+  </ul>
+  <h5>Security of Audit Trails</h5>
+  <p>An attacker will often try to erase records of what they changed on a system. For that reason, {Company_Name} must secure audit trails such that they cannot be altered. The following requirements apply specifically to the protection of audit trails:</p>
+  <ul>
+    <li>Only those with a job-related need may be able to view or access audit trails.</li>
+    <li>Audit trail files must be protected from unauthorised modifications.</li>
+    <li>Audit trails must be promptly backed up to a centralised server or other media that is difficult to alter.</li>
+    <li>Logs for external-facing systems (such as web, firewall, DNS, etc.) must be written to a separate system that is more secure than the external-facing system, such as a server located on the internal LAN.</li>
+    <li>Log files must be monitored for unusual behaviour through the use of file-integrity monitoring or change detection software. Logs that don’t often change should be monitored for any changes. Logs that do often change should be monitored for changes outside normal parameters, such as the deletion of the log, major log file size changes, or any other indications that the log has been tampered with.</li>
+  </ul>
+  <h4>Firewalls</h4>
+  <p>Firewalls are arguably the most important component of a sound security strategy. Internet connections and other unsecured networks must be separated from {Company_Name} network through the use of a firewall.</p>
+  <h5>Configuration</h5>
+  <p>The following statements apply to the Company's implementation of firewall technology:</p>
+  <ul>
+    <li>A firewall or firewalls must be configured by default to block inbound access to the network from external sources.</li>
+    <li>Firewall rules must be as restrictive as possible while still providing the necessary access required for business operations.</li>
+    <li>Firewalls must provide secure administrative access (through the use of strong encryption) with management access limited to only networks where management connections would be expected to originate.</li>
+    <li>No unnecessary services or applications can be enabled on firewalls. {Company_Name} must use 'hardened' systems for firewall platforms or use pre-hardened appliances.</li>
+    <li>Clocks on firewalls must be synchronised with {Company_Name}'s other networking hardware using NTP or other means. This should be done by either synchronising directly to an external time server or by synchronising to an internal time server which itself is synchronised to an external time server.</li>
+    <li>Firewall rules that allow access to high security zones or confidential information, regardless of the type of access, must be approved by management and documented accordingly. Documentation must include port, level and type of access, business reason for access, and proof of management approval for access.</li>
+    <li>Firewall rulesets must be documented and audited every six months. Documentation must include details of each rule, including business justification for all services and protocols allowed. Documentation of any protocols considered to be insecure must include a description of security features implemented to mitigate risk to acceptable levels. Audits must cover each rule, what it is for, if it is still necessary, and if it can be implemented more securely. All documentation must be approved and maintained by the Information Security Manager.</li>
+    <li>For its own protection, the firewall ruleset must include a "stealth rule," which forbids connections to the firewall itself.</li>
+    <li>The firewall must log dropped or rejected packets.</li>
+    <li>Systems must be configured to restrict the disclosure of internal IP addresses and routing information.</li>
+    <li>No internal network IP address must be allowed to pass from the Internet into the DMZ. This will prevent attacks that spoof IP addresses so that they look like legitimate internal traffic, and thus bypass rules designed to prohibit external connections.</li>
+    <li>Any publicly accessible services, protocols, or ports must be segregated by a firewall from the company’s internal network. must be routed to IP addresses located in the DMZ.</li>
+    <li>A process must be developed so that any changes to the firewall configuration must be approved by the Information Security Manager before being implemented.</li>
+  </ul>
+  <h5>Outbound Traffic Filtering</h5>
+  <p>Firewalls are often configured to block only inbound connections from external sources; however, by filtering outbound connections from the network, security can be greatly improved. This practice is also referred to as "Egress Traffic Filtering."</p>
+  <p>Blocking outbound traffic prevents users from accessing unnecessary, and many times, dangerous services. By specifying exactly what outbound traffic to allow, all other outbound traffic is blocked. This type of filtering would block root kits, viruses, and other malicious tools if a host were to become compromised.</p>
+  <p>{Company_Name} requires that permitted outbound traffic be limited to only known “good” services, which are the following ports: 22, 25, 53, 80, 143, 443, 465, 585, 993 and 995. All other outbound traffic must be blocked at the firewall unless an exception is granted from the Information Security Manager.</p>
+  <h5>Networking Hardware</h5>
+  <p>Networking hardware, such as routers, switches, bridges, and access points, must be implemented in a consistent manner. The following statements apply to {Company_Name}'s implementation of networking hardware:</p>
+  <ul>
+    <li>Networking hardware must provide secure administrative access (through the use of strong encryption) with management access limited to only networks where management connections would be expected to originate.</li>
+    <li>Clocks on networking hardware must be synchronised with {Company_Name}'s other networking hardware using NTP or other means. This should be done by either synchronising directly to an external time server or by synchronising to an internal time server which itself is synchronised to an external time server.</li>
+    <li>Switches must be used instead of hubs. Hubs are not to be used without the specific permission of the Information Security Manager. When using switches, {Company_Name} must use VLANs to separate networks if it is reasonable and possible to do so.</li>
+    <li>Access control lists must be implemented on network devices that prohibit direct connections to the devices. Connections to routers must be limited to the greatest extent possible. Exceptions to this are management connections that can be limited to known sources.</li>
+    <li>Only services, daemons, and protocols necessary for the system to perform the intended business functions are to be enabled on any system. All other services, daemons, protocols must be disabled.</li>
+    <li>Access to administrative ports on networking hardware must be restricted to known management hosts and otherwise blocked with a firewall or access control list.</li>
+    <li>Systems must be configured to restrict the disclosure of internal IP addresses and routing information.</li>
+    <li>Router rulesets (if applicable) must be reviewed every six months. This review must cover each rule, what it is for, if it is still necessary, and if it can be implemented more securely.</li>
+    <li>A process must be developed so that any changes to the router configuration must be approved by the Information Security Manager before being implemented.</li>
+  </ul>
+  <h5>Network Servers</h5>
+  <p>Servers typically accept connections from a number of sources, both internal and external. As a general rule, the more sources that connect to a system, the more risk that is associated with that system, so it is particularly important to secure network servers. The following statements apply to {Company_Name}'s use of network servers:</p>
+  <ul>
+    <li>Only services, daemons, protocols, scripts, drivers, and features necessary for the system to perform the intended business functions are to be enabled on any system. All other services, daemons, protocols, scripts, drivers and features must be disabled. If possible, follow a server-hardening guide consistent with industry best practices.</li>
+    <li>Network servers, even those meant to accept public connections, must be protected by a firewall or access control list.</li>
+    <li>Implement only one primary function per server. This will ensure that applications with different security levels do not exist on the same server.</li>
+    <li>A standard installation and hardening process must be developed for {Company_Name}'s network servers. This will provide consistency across servers no matter what employee or contractor handles the installation.</li>
+    <li>Systems must be configured to restrict the disclosure of internal IP addresses and routing information.</li>
+    <li>Configure system security parameters to prevent misuse.</li>
+    <li>Clocks on network servers must be synchronised with {Company_Name}'s other networking hardware using NTP or other means. This should be done by either synchronising directly to an external time server or by synchronising to an internal time server which itself is synchronised to an external time server.</li>
+  </ul>
+  <h5>Intrusion Detection/Intrusion Prevention</h5>
+  <p>Intrusion Detection System (IDS) and Intrusion Prevention System (IPS) technology can be useful in network monitoring and security. The tools differ in that IDS alerts to suspicious activity whereas an IPS blocks the activity. When tuned correctly, IDSs are useful but can generate a large amount of data that must be evaluated for the system to be of any use. IPSs automatically take action when they see suspicious events, which can be both good and bad, since legitimate network traffic can be blocked along with malicious traffic.</p>
+  <p>{Company_Name} requires the use of either an IDS or IPS on critical or high-risk or high-security network segments. If an IDS is used, procedures must be implemented to review and act on the alerts expediently. If an IPS is used, procedures must be implemented that provide a mechanism for emergency unblocking if the IPS obstructs legitimate traffic. Also, if an IPS is used, it must be audited and documented according to the standards detailed in the "Firewalls" section of this document.</p>
+  <h5>File Integrity Monitoring</h5>
+  <p>File Integrity Monitoring (FIM) will alert to changes to critical system files. This can be useful in notifying the IT staff to malicious activity or other significant network events that may otherwise go unnoticed. {Company_Name} requires the use of FIM technology that will alert to changes to system files, configuration files, or content files. The FIM software must be configured to perform critical file comparisons at least weekly.</p>
+  <h4>Security Testing</h4>
+  <p>Security testing is an important part of maintaining {Company_Name}'s network security. {Company_Name} requires a mix of both strategies be used (specific guidance below). The following sections detail {Company_Name}'s requirements for security testing.</p>
+  <h5>Wireless Scans</h5>
+  <p>{Company_Name} must create and document a process to evaluate the network for unauthorised wireless access devices connected to the network, such as wireless access points, wireless cards, and portable wireless devices (such as USB-connectable devices). This process must be performed at least quarterly.</p>
+  <p>This analysis can be done via a wireless analyser or physical inspection (if the scope of the inspection is limited). If the network is larger or includes multiple nodes, a combination of physical inspection and wireless spectrum analysis is required. Additionally, automated monitoring can be employed. If automated wireless monitoring is utilised, the employed solution must be configured to generate alerts to company personnel when an unauthorised device is discovered.</p>
+  <p>Refer to {Company_Name}’s Incident Response Plan for specific actions to take if an unauthorised wireless device is discovered, either during a manual scan or discovered via automated analysis (if this technology is used by company).</p>
+  <h5>Internal Vulnerability Scans</h5>
+  <p>Internal Vulnerability Scans, that is, vulnerability scans that test systems from a point internal to the network perimeter must be performed quarterly. At a minimum, all systems in the sensitive or personal data environment or high security zones must be included in the scope of the internal scans. The purpose of these scans is to locate any vulnerabilities that exist on the local network, that are either exploitable by local access or that may be hidden by firewalls or other access controls.</p>
+  <p>Internal scans can be performed by qualified company personnel who are reasonably independent of the systems being tested. Alternatively, {Company_Name} may engage a third party to conduct the internal scans. Any third-party company selected must be recognised as an Approved Scanning Vendor (ASV) by the PCI SSC.</p>
+  <p>{Company_Name} must put a process in place to quickly remediate any vulnerabilities discovered that are rated “high-risk” vulnerabilities. After remediation activities, {Company_Name} must rescan the network until no high-risk vulnerabilities are found.</p>
+  <p>In addition to the regularly scheduled quarterly scans, {Company_Name} must re-scan the network after any significant change to the network, such as: new component installations, changes in network topology, firewall rule changes, product upgrades, etc. These scans can be performed by internal company personnel as qualified above.</p>
+  <h5>External Vulnerability Scans</h5>
+  <p>External Vulnerability Scans, that is, vulnerability scans that test systems from a point external to the network perimeter, must be performed quarterly. External scans must test {Company_Name}’s security posture from a public perspective (the internet). The purpose of these scans is to locate any vulnerabilities that exist and can be accessed from external sources.</p>
+  <p>External scans must be performed by an Approved Scanning Vendor (ASV) with organisational independence of {Company_Name}’s systems and security configuration. {Company_Name} must put a process in place to quickly remediate any vulnerabilities discovered that are rated “high-risk” vulnerabilities. After remediation activities, {Company_Name} must rescan the network until no high-risk vulnerabilities are found, such as those rated higher than 4.0 by the Common Vulnerability Scoring System (CVSS).</p>
+  <p>In addition to the regularly scheduled quarterly scans, {Company_Name} must re-scan the network after any significant change to the network, such as: new component installations, changes in network topology, firewall rule changes, product upgrades, etc. These scans can be performed by internal company personnel who are reasonably independent of the systems being tested.</p>
+  <h5>Penetration Testing</h5>
+  <p>A penetration test differs from a vulnerability assessment in that penetration testing is a manual process that includes the identification of vulnerabilities present on a network or system, but also the active exploit of those vulnerabilities. The first step in a penetration test is often a vulnerability scan, but a penetration test will then go much deeper, with the intent of simulating a real-world attack and identifying methods an attacker may use to successfully penetrate the network.</p>
+  <p>External and internal penetration tests must be performed at least annually, as well as after any significant infrastructure or application upgrade or modification. Penetration testing must be performed at both the network and application layers.</p>
+  <h4>Disposal of Information Technology Assets</h4>
+  <p>IT assets, such as network servers and routers, often contain sensitive data about {Company_Name}'s network communications. When such assets are decommissioned, the following guidelines must be followed:</p>
+  <ul>
+    <li>Any asset tags or stickers that identify {Company_Name} must be removed before disposal.</li>
+    <li>Any configuration information must be removed by deletion or, if applicable, resetting the device to factory defaults.</li>
+  </ul>
+  <p>At a minimum, data wiping must be used. Simply reformatting a drive or deleting data does not make the data unrecoverable. If wiping is used, {Company_Name} must use the most secure commercially available methods for data wiping. Alternatively, {Company_Name} has the option of physically destroying the data storage mechanism from the device (such as its hard drive or solid-state memory).</p>
+  <h4>Network Compartmentalisation</h4>
+  <p>Good network design is integral to network security. By implementing network compartmentalisation, which is separating the network into different segments based on their security classification, {Company_Name} will reduce its network-wide risk from an attack, virus outbreak, or unauthorised disclosure of confidential information.</p>
+  <p>Firewalls and routers must be configured to seriously restrict or block connections between trusted and untrusted networks.</p>
+  <p>Further, security can be increased if traffic must traverse additional enforcement/inspection points. {Company_Name} requires the following with regard to network compartmentalisation:</p>
+  <h4>High Risk Networks and High Security Zones</h4>
+  <p><i>Examples</i><br>Guest network, wireless network, Cardholder Data Environment, systems storing confidential data, Demilitarised Zone (DMZ)</p>
+  <p><i>Requirements</i><br>Access must be restricted to only those services and ports that are absolutely necessary for business operations and separate the network with a firewall. Direct access to or from these networks is prohibited. This includes both inbound and outbound traffic. Initially an implicit “deny all” rule must be implemented, and then specific, limited access opened as necessary.</p>
+  <p>The firewall must support dynamic packet filtering, such that only established connections are allowed through. Management approval must be obtained for any rule or configuration change that provides access at any level to high security zones. Any ports opened to high security zones must be documented (inbound or outbound).</p>
+  <p>Documentation must include: the port, the level and type of access, the necessary business reason for the access, and management approval for such access. Access must only be granted when there is no other viable way to meet the business need.</p>
+  <h4>Externally Accessible Systems</h4>
+  <p><i>Examples</i><br>Email servers, web servers</p>
+  <p><i>Requirements</i><br>Segmentation of externally accessible systems from {Company_Name}'s internal network is required and must be enforced with a firewall or router that provides granular access controls (source, destination, service, port, etc.).</p>
+  <h4>Internal Networks</h4>
+  <p><i>Examples</i><br>Sales, Finance, Human Resources</p>
+  <p><i>Requirements</i><br>Segmentation of internal networks from one another can improve security as well as reduce chances that a user will access data that they has no right to access. {Company_Name} requires that networks be segmented to the fullest reasonable extent. If the internal network is also considered a high risk or high security zone, then the more restrictive policy will apply.</p>
+  <h4>Network Documentation</h4>
+  <p>Network documentation, specifically as it relates to security, is important for efficient and successful network management. Further, the process of regularly documenting the network ensures that {Company_Name}'s IT Staff has a firm understanding of the network architecture at any given time. The intangible benefits of this are immeasurable.</p>
+  <p>{Company_Name} requires a formal network documentation process. At a minimum, network documentation must include:</p>
+  <ul>
+    <li>Network diagram(s), including any wireless networks</li>
+    <li>System configurations</li>
+    <li>Firewall ruleset</li>
+    <li>IP Addresses</li>
+    <li>Access Control Lists</li>
+    <li>Details of rule changes as specified in this Policy</li>
+    <li>{Company_Name} requires that network documentation be updated on a quarterly basis.</li>
+  </ul>
+  <h4>Antivirus/Anti-Malware</h4>
+  <p>Computer viruses and malware are pressing concerns in today's threat landscape. If a system or network is not properly protected, a virus outbreak can have devastating effects on the system, the network, and the entire company. {Company_Name} provides the following guidelines on the use of antivirus/anti-malware software:</p>
+  <ul>
+    <li>All company-provided user workstations and servers must have antivirus/anti-malware software installed.</li>
+    <li>Workstation software must maintain a current "subscription" to receive patches and virus signature/definition file updates.</li>
+    <li>Patches, updates, and antivirus signature file updates must be installed in a timely manner, either automatically or manually. Software must be set to automatically install updates whenever practical.</li>
+    <li>Antivirus solution must be capable of detecting and removing all known threats. In addition to viruses, the software must eradicate threats from all known malware, adware, spyware, Trojans, rootkits, worms, or any other known malicious virus-like software.</li>
+    <li>Antivirus software must automatically run periodic scans with no user intervention required to initiate the scan.</li>
+    <li>Antivirus software must be able and configured to generate audit logs that are retained for at least one year. A minimum of three months’ logs is required to be available for immediate restoration and/or analysis.</li>
+  </ul>
+  <h4>Software Use Policy</h4>
+  <p>Software applications can create risk in a number of ways, and thus certain aspects of software use must be covered by this policy. {Company_Name} provides the following requirements for the use of software applications:</p>
+  <ul>
+    <li>Only legally licensed software may be used. Licenses for {Company_Name}'s software must be stored in a secure location.</li>
+    <li>Open source and/or public domain software can only be used with the permission of the Information Security Manager.</li>
+    <li>Software must be kept reasonably up to date by installing new patches and releases from the manufacturer.</li>
+    <li>Vulnerability alerts must be monitored for all software products that {Company_Name} uses. {Company_Name} must assign a risk ranking, based on industry best practices, to each vulnerability discovered. Any patches deemed critical, in that they fix vulnerabilities or security holes, must be installed within one month of the patch release.</li>
+  </ul>
+  <h4>Software/Application Development Policy</h4>
+  <p>This section applies if {Company_Name} develops custom software applications for internal or external use. It is {Company_Name}’s intent to develop software in a secure manner and in accordance with industry best practices for secure application coding. {Company_Name} requires that security be included in all phases of application development, including the following:</p>
+  <p>Custom application accounts, authentication data, test accounts, and test data must be removed prior to the application going into production.</p>
+  <p>Custom application code must be reviewed for security weaknesses prior to being put into production. This review can be performed by qualified company personnel or a third party. Regardless, the reviewer must be independent of the software developer. Automated review tools can be employed but should not be a substitute for a qualified individual or team, as automated tools cannot catch every vulnerability.</p>
+  <p>Software development systems must be separated from the production environment, so that vulnerabilities introduced, perhaps temporarily, during development do not affect the production environment. The two environments should be independent, with privileges managed independently of one another. For example, a developer may have administrative privileges to the testing environment but user-level access to the production environment.</p>
+  <p>Production data, including live credit card data, must never be used for testing and/or development. Account numbers suitable for testing can be obtained from payment card vendors.</p>
+  <p>{Company_Name} must implement change control procedures into its application development process that allow for the implementation of security patches and software modifications. These must include documentation of impact of the change, documentation of approval of the change by authorised parties, functionality testing that verify security controls remain effective, and back-out procedures.</p>
+  <p>Software must be developed using secure coding standards, based on industry best practices, with the development approach adapted as these best practices change over time. At minimum, the coding methodology should include protection against code injection flaws (such as SQL injection), buffer overflow attacks, insecure cryptographic storage, insecure communications, improper error handling, cross-site scripting (XSS), cross-site forgery (CSRF), improper access control (such as directory transversal), as well as any vulnerabilities deemed high-risk during the vulnerability ranking process.</p>
+  <p>Public facing web applications must be protected by either installing a securely configured web-application firewall or performing manual or automated vulnerability scans targeted at the web application on an annual basis (or after changes to the application).</p>
+  <h4>Maintenance Windows and Scheduled Downtime</h4>
+  <p>Certain tasks require that network devices be taken offline, either for a simple reboot, an upgrade, or other maintenance. When this occurs, the IT Staff must perform the tasks during a scheduled weekly or monthly maintenance window. Tasks that are deemed "emergency support," or tasks required to close discovered vulnerabilities, as determined by the Information Security Manager, must be done with one hour's notice to users or immediately if the situation dictates.</p>
+  <h4>Change Management</h4>
+  <p>Documenting changes to network devices is a good management practice and can help speed resolution in the event of an incident. The IT Staff must document hardware and/or configuration changes to network devices in a "change log." Network devices must bear a sticker or tag indicating essential information, such as the person responsible for the device, contact information for that person, and the purpose of the device. Additional information should be added as necessary, such as the device name, IP address, asset information, and any additional data that may be helpful, such as information about cabling.</p>
+  <p>Any ports opened to high security zones must be documented (inbound or outbound). Documentation must include: the port, the level and type of access, the necessary business reason for the access, and management approval for such access. Granular documentation for all firewall rule changes, not just those that fall under the requirement above, is recommended.</p>
+  <p>Any changes to the configuration of firewalls or networking hardware must be documented, with the documentation including the approval of the Information Security Manager.</p>
+  <h4>Suspected Security Incidents</h4>
+  <p>When a security incident is suspected that may impact a network device, the IT Staff must refer to {Company_Name}'s Incident Response policy for guidance.</p>
+  <h4>Redundancy</h4>
+  <p>Redundancy can be implemented on many levels, from redundancy of individual components to full site-redundancy. As a general rule, the more redundancy implemented, the higher the availability of the device or network, and the higher the associated cost. {Company_Name} wishes to provide the IT Manager and/or Information Security Manager, as appropriate, with latitude to determine the appropriate level of redundancy for critical systems and network devices. Redundancy should be implemented where it is needed, and should include some or all of the following:</p>
+  <ul>
+    <li>Hard drive redundancy, such as mirroring or RAID</li>
+    <li>Server level redundancy, such as clustering or high availability</li>
+    <li>Component level redundancy, such as redundant power supplies or redundant NICs</li>
+    <li>Keeping hot or cold spares onsite</li>
+  </ul>
+  <h4>Manufacturer Support Contracts</h4>
+  <p>Outdated products can result in a serious security breach. When purchasing critical hardware or software, {Company_Name} must purchase a maintenance plan, support agreement, or software subscription that will allow {Company_Name} to receive updates to the software and/or firmware for a specified period of time. The plan must meet the following minimum requirements:</p>
+  <p><i>Hardware</i><br>The arrangement must allow for repair/replacement of the device within an acceptable time period, as determined by the Information Security Manager, as well as firmware or embedded software updates.</p>
+  <p><i>Software</i><br>The arrangement must allow for access to updates, upgrades, and hotfixes for a specified period of time.</p>
+</body></html>
